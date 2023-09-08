@@ -16,10 +16,11 @@ Assessment Requirements
 
 let collectNFT=[];
 
-function mintNFT (name,description) {
+function mintNFT (name,description,color) {
     const metadata = {
         "name": name,
         "description": description,
+       "color":color,
       };
     collectNFT.push(metadata);
 }
@@ -30,6 +31,7 @@ function listNFTs () {
     for (let i=0; i<collectNFT.length;i++){
         console.log("Name: " + nft[i].name);
         console.log("Desc: " + nft[i].description);
+       console.log("Desc: " + nft[i].color);
     }
 }
 
@@ -39,7 +41,8 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("NFT 1", "Description 1");
-mintNFT("NFT 2", "Description 2");
+mintNFT("NFT 1", "Description 1","Color 1");
+mintNFT("NFT 2", "Description 2","Color 2");
+mintNFT("NFT 3", "Description 3","Color 3");
 listNFTs();
 console.log("Total Supply: " + getTotalSupply());
